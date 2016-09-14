@@ -29,6 +29,15 @@
             $this->assertEquals(true, $output);
         }
 
+        function test_PalindromeIdentifier()
+        {
+
+            $testCheckFalse = new Palindrome;
+            $input = "Hello Dad 101";
+            $output = $testCheckFalse->palindromeIdentifier($input);
+            $this->assertEquals(['Dad', '101'], $output);
+        }
+
 
     }
 ?>

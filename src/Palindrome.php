@@ -25,6 +25,20 @@ class Palindrome
 
         }
 
+        function palindromeIdentifier($input)
+        {
+            $matches = array();
+            $words = explode(" ", $input);
+            foreach ($words as $word) {
+                $output = $this->palindromeCheck($word);
+                if ($output == true && !in_array($word, $matches)) {
+                    array_push($matches, $word);
+                }
+            }
+            return $matches;
+
+        }
+
 
     }
 
